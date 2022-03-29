@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "axios": "^0.26.1"
+  },
+  "engines": {
+    "node": "12.16.x"
   }
 }
