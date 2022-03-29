@@ -10,6 +10,11 @@ import { PokemonDetailed } from './components/PokemonDetailed';
 
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getFull())
+  })
 
 
 
