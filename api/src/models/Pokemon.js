@@ -12,25 +12,39 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isAlpha: true
+      }
     },
     hp: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
     attack: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
     defense: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
     speed: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
     height: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
-    weigth: {
-      type: DataTypes.INTEGER
+    weight: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
+    image: {
+      type: DataTypes.TEXT,
+      isUrl: true,
+      defaultValue: 'https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2021/05/pikachu-clipart-png.png?resize=860%2C860&ssl=1'
+    }
   },
     {
       timestamps: false
